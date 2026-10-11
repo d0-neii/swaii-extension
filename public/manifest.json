@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Swaii",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "마우스 제스처만으로 웹을 제어하는, 개인화된 브라우징 자동화 도구",
   "icons": {
     "128": "icon-128.png"
