@@ -101,7 +101,10 @@ const onMouseUp = async () => {
 };
 
 const onContextMenu = (e: MouseEvent) => {
-  if (hasMouseMoved) {
+  // macOS는 우클릭을 "누르는 순간" contextmenu가 발생하므로(isDrawing 중),
+  // Windows는 "뗄 때" 발생하므로(hasMouseMoved로 판단) 둘 다 막는다.
+  // Windows에서 움직이지 않은 단순 우클릭은 기존처럼 메뉴가 뜬다.
+  if (isDrawing || hasMouseMoved) {
     e.preventDefault();
   }
 };
